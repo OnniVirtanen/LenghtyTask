@@ -9,7 +9,7 @@ int main()
     return 0;
 }
 
-// Counts from 0 to billion
+// Laskee nollasta miljardiin
 void LenghtyTask(void (*pInform)(int)) 
 {
     int billion = 1000000000;
