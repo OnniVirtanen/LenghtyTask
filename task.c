@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdbool.h>
 
 void LenghtyTask(void (*pInform)(int));
 void Inform(int percentage);
@@ -19,7 +20,8 @@ void LenghtyTask(void (*pInform)(int))
     for (int i = 0; i <= billion; i++) {
         double percentage = (double) i / billion * 100;        
         // jos prosentti on kokonaisluku
-        if (i % (billion / 100) == 0) {
+        bool isKokonaisluku = i % (billion / 100) == 0;
+        if (isKokonaisluku) {
             for (int j = 0; j < length; j++) {
                 if (percentage == percentToInform[j]) {
                     (*pInform)((int) percentage);
