@@ -17,13 +17,17 @@ void LenghtyTask(void (*pInform)(int))
     double percentToInform[] = {5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60, 65, 70, 75, 80, 85, 90, 95, 100};
     int length = sizeof(percentToInform) / sizeof(percentToInform[0]);
     
-    for (int i = 0; i <= billion; i++) {
+    for (int i = 0; i <= billion; i++) 
+    {
         double percentage = (double) i / billion * 100;        
         // jos prosentti on kokonaisluku
         bool isKokonaisluku = i % (billion / 100) == 0;
-        if (isKokonaisluku) {
-            for (int j = 0; j < length; j++) {
-                if (percentage == percentToInform[j]) {
+        if (isKokonaisluku) 
+        {
+            for (int j = 0; j < length; j++) 
+            {
+                if (percentage == percentToInform[j]) 
+                {
                     (*pInform)((int) percentage);
                 }
             }
